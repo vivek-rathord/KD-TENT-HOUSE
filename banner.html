@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Google Fonts Import for clean typography */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #b89244; /* Warm Gold */
+  --text-main: #1e293b;     /* Deep Slate */
+  --text-muted: #64748b;    /* Cool Gray */
+  --bg-light: #f8fafc;      /* Off White */
+  --card-bg: #ffffff;
+}
+
+.services-section {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-light);
+  padding: 80px 20px;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.services-header .sub-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.services-header p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Services Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* Service Card Design */
+.service-card {
+  background-color: var(--card-bg);
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 40px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Hover Animation */
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(184, 146, 68, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(184, 146, 68, 0.02);
+}
+
+/* Service Icon Style */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(184, 146, 68, 0.1);
+  color: var(--primary-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.service-card:hover .service-icon {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Card Typography */
+.service-card h3 {
+  font-size: 1.35rem;
+  color: var(--text-main);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Interactive Link */
+.service-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  display: inline-block;
+}
+
+.service-card:hover .service-link {
+  padding-left: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 15px;
+  }
+  
+  .services-header h2 {
+    font-size: 2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr; /* Switch to full width on mobile screens */
+  }
+  
+  .service-card {
+    padding: 30px;
+  }
+}
+    </style>
+</head>
+<body>
+    <section class="services-section">
+  <div class="services-container">
+    <div class="services-header">
+      <span class="sub-title">What We Do</span>
+      <h2>Our Premium Services</h2>
+      <p>From intimate gatherings to grand celebrations, we provide top-tier infrastructure and management to turn your vision into a stunning reality.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Elegant Canopy Tent Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+        </div>
+        <h3>Luxury Waterproof Tents</h3>
+        <p>Premium German hangers, traditional luxury marquees, and fully waterproof structures tailored to match your event scale and weather conditions.</p>
+        <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Lighting/Sparkle Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 21l-.813-5.096L3 15l5.096-.813L9 9l.813 5.187L15 15l-5.187.813zM18.125 7.625L17.5 11l-.625-3.375L13.5 7l3.375-.625L17.5 3l.625 3.375L21.5 7l-3.375.625z" />
+          </svg>
+        </div>
+        <h3>Thematic Lighting & Decor</h3>
+        <p>Transformative ambient lighting, stunning chandeliers, grand entryways, and custom floral drapes that set the perfect mood for your celebration.</p>
+        <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Fine Dining/Catering Setup Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 17.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+        </div>
+        <h3>Catering Setup & Furniture</h3>
+        <p>Premium banquet chairs, elegant Maharaja sofas, trendy cocktail tables, and high-end buffet counters with fine linens to complement your theme.</p>
+        <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Stage/Event Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499c-.105-.347-.492-.546-.838-.448l-2.23.63a.75.75 0 00-.547.547l-.63 2.23a.492.492 0 01-.448.338H4.5a.75.75 0 00-.75.75v2.25c0 .243-.175.448-.448.533l-2.23.63a.75.75 0 00-.547.547l.63 2.23c.085.242.01.512-.178.685l-1.6 1.465a.75.75 0 00.103 1.152l1.9 1.28c.2.135.293.385.234.622l-.546 2.21a.75.75 0 00.916.915l2.21-.546c.237-.06.487.034.622.234l1.28 1.9a.75.75 0 001.152.103l1.465-1.6a.493.493 0 01.685-.178l2.23.63a.75.75 0 00.547-.547l.63-2.23a.492.492 0 01.448-.338h2.25a.75.75 0 00.75-.75v-2.25a.493.493 0 01.448-.533l2.23-.63a.75.75 0 00.547-.547l-.63-2.23a.493.493 0 01.178-.685l1.6-1.465a.75.75 0 00-.103-1.152l-1.9-1.28a.493.493 0 01-.234-.622l.546-2.21a.75.75 0 00-.916-.915l-2.21.546a.493.493 0 01-.622-.234l-1.28-1.9a.75.75 0 00-1.152-.103l-1.465 1.6a.492.492 0 01-.685.178l-2.23-.63z" />
+          </svg>
+        </div>
+        <h3>Stage & Mandap Designs</h3>
+        <p>Breathtaking stage backdrops, traditional or contemporary wedding mandaps, and high-quality wooden flooring/carpeting designs.</p>
+        <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Temperature Control/Fan Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3M16.5 5.25a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM16.5 18.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          </svg>
+        </div>
+        <h3>Cooling & Power Backup</h3>
+        <p>Heavy-duty AC units, industrial mist fans, and soundproof power generators to ensure your event runs smoothly without a single glitch.</p>
+        <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Corporate Event/User Group Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+          </svg>
+        </div>
+        <h3>Corporate & Public Events</h3>
+        <p>Professional setups for exhibitions, political rallies, corporate annual meets, and product launches with strict adherence to safety standards.</p>
+        <a href="#contact" class="service-link">Inquire Now &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

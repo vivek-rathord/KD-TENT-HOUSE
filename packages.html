@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Flip Contact Cards</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+    background:linear-gradient(135deg,#f8f9fa,#eef3f7);
+}
+
+/* SECTION */
+.contact-section{
+    width:100%;
+    max-width:1200px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:3rem;
+    color:#222;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+    font-size:1.1rem;
+}
+
+/* GRID */
+.dh-box-wrapper{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* FLIP CARD */
+.dh-flip-card{
+    height:320px;
+    perspective:1200px;
+}
+
+.dh-flip-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform .9s cubic-bezier(.4,.2,.2,1);
+    transform-style:preserve-3d;
+}
+
+.dh-flip-card:hover .dh-flip-inner{
+    transform:rotateY(180deg);
+}
+
+/* BOTH SIDES */
+.dh-front,
+.dh-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    backface-visibility:hidden;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+/* FRONT */
+.dh-front{
+    background:#fff;
+    border:1px solid rgba(255,166,0,.25);
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+.dh-front::before{
+    content:"";
+    position:absolute;
+    top:-50px;
+    right:-50px;
+    width:120px;
+    height:120px;
+    background:orange;
+    border-radius:50%;
+    opacity:.12;
+}
+
+.dh-front::after{
+    content:"";
+    position:absolute;
+    bottom:-40px;
+    left:-40px;
+    width:100px;
+    height:100px;
+    background:orange;
+    border-radius:50%;
+    opacity:.08;
+}
+
+.dh-icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ffcc00,#ff9800);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(255,165,0,.35);
+}
+
+.dh-front h3{
+    font-size:28px;
+    color:#222;
+    font-weight:700;
+}
+
+/* BACK */
+.dh-back{
+    background:linear-gradient(135deg,#ff9800,#ffb300);
+    color:white;
+    transform:rotateY(180deg);
+    box-shadow:
+    0 15px 35px rgba(255,152,0,.35);
+}
+
+.dh-back h3{
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.dh-back p{
+    line-height:1.9;
+    font-size:17px;
+}
+
+/* FLOATING ANIMATION */
+.dh-flip-card{
+    animation:float 4s ease-in-out infinite;
+}
+
+.dh-flip-card:nth-child(2){
+    animation-delay:.5s;
+}
+
+.dh-flip-card:nth-child(3){
+    animation-delay:1s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* TABLET */
+@media(max-width:992px){
+
+    .dh-box-wrapper{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section-title h2{
+        font-size:2.5rem;
+    }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .dh-box-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .dh-flip-card{
+        height:280px;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+    .dh-front h3,
+    .dh-back h3{
+        font-size:24px;
+    }
+
+    .dh-back p{
+        font-size:15px;
+    }
+}
+</style>
+</head>
+<body>
+
+<section class="contact-section">
+
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Hover over the cards to view details</p>
+    </div>
+
+    <div class="dh-box-wrapper">
+
+        <!-- CALL -->
+        <div class="dh-flip-card">
+            <div class="dh-flip-inner">
+
+                <div class="dh-front">
+                    <div class="dh-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us Now</h3>
+                </div>
+
+                <div class="dh-back">
+                    <h3>Call Us Now</h3>
+                    <p>
+                        +91 9805829777<br>
+                        +91 9805829777
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="dh-flip-card">
+            <div class="dh-flip-inner">
+
+                <div class="dh-front">
+                    <div class="dh-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                </div>
+
+                <div class="dh-back">
+                    <h3>Email Us</h3>
+                    <p>
+                        info@kdtenthouse.com<br>
+                        booking@kdtenthouse.com
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="dh-flip-card">
+            <div class="dh-flip-inner">
+
+                <div class="dh-front">
+                    <div class="dh-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                </div>
+
+                <div class="dh-back">
+                    <h3>Our Location</h3>
+                    <p>
+                        KD Tent House<br>
+                        Near Bus Stand Kangra<br>
+                        Himachal Pradesh 176001
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</body>
+</html>
