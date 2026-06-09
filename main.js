@@ -289,7 +289,7 @@ const blogPosts = {
         category: "Wedding Decor",
         date: "April 21, 2026",
         read: "6 min read",
-        image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1400&auto=format&fit=crop",
+        image: "./Images/_7 Vows Production_Cam 1 Reception__MG_3696.jpg",
         alt: "Elegant wedding venue with floral decoration and candles",
         content: `
             <p>A beautiful event venue is rarely about one expensive item. It is about the way every detail works together: the entrance, guest movement, seating comfort, stage focus, lighting warmth and finishing decor. At KD Tent House, we start by reading the space first, then build a design that suits the family, guest count and celebration style.</p>
@@ -309,7 +309,7 @@ const blogPosts = {
         category: "Standard, Wedding",
         date: "September 28, 2025",
         read: "5 min read",
-        image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1400&auto=format&fit=crop",
+        image: "./Images/_7 Vows Production_Cam 1 Wedding__MG_3284 (1).jpg",
         alt: "Outdoor cocktail party setup with lights and dining decor",
         content: `
             <p>A cocktail party works best when the space feels energetic without becoming crowded. Unlike a traditional ceremony, guests move constantly between music, drinks, snacks, photographs and conversation. The decor should support that movement.</p>
@@ -329,7 +329,7 @@ const blogPosts = {
         category: "Wedding",
         date: "May 12, 2026",
         read: "7 min read",
-        image: "https://images.unsplash.com/photo-1519167758481-83f29c7c3f6d?q=80&w=1400&auto=format&fit=crop",
+        image: "./Images/DSC00004.jpg",
         alt: "Luxury wedding table decoration with chandeliers",
         content: `
             <p>Wedding themes in 2026 are moving toward warm, personal and highly usable spaces. Families want decor that looks premium in photos, but they also want guests to sit comfortably, move easily and enjoy every function without stress.</p>
@@ -369,7 +369,7 @@ const blogPosts = {
         category: "Budget Decor",
         date: "February 9, 2026",
         read: "5 min read",
-        image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1400&auto=format&fit=crop",
+        image: "./Images/DSC00004.jpg",
         alt: "Outdoor wedding decoration with simple elegant seating",
         content: `
             <p>Budget-friendly decoration does not mean plain decoration. It means spending carefully on the areas guests see and use the most. With the right planning, a simple venue can still look polished and festive.</p>
