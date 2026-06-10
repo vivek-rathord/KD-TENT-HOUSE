@@ -585,3 +585,31 @@ faqItems.forEach(item => {
     });
 
 });
+
+// ===========================
+// CUSTOM 404 PAGE REDIRECT
+// ===========================
+
+const validPages = [
+    "/",
+    "/index.html",
+    "/about.html",
+    "/services.html",
+    "/contact.html",
+    "/events.html",
+    "/gallery.html",
+    "/blog.html",
+    "/blog-detail.html",
+    "/packages.html",
+    "/banner.html",
+    "/404.html"
+];
+
+const currentPath = window.location.pathname;
+const pageExists = validPages.some(page =>
+    currentPath === page || currentPath.endsWith(page)
+);
+
+if (!pageExists) {
+    window.location.href = "/404.html";
+}
