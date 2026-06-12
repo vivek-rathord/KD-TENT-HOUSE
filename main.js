@@ -217,12 +217,28 @@ popup?.addEventListener("click", event => {
 /* =========================================================CONTACT FORM ========================================================= */
 
 const contactForm = document.getElementById("contactForm");
+const contactStatus = document.getElementById("contactStatus");
 const thankyouPopup = document.getElementById("thankyouPopup");
 const thankyouClose = document.getElementById("thankyouClose");
 const thankyouOk = document.getElementById("thankyouOk");
 
 function closeThankyouPopup(){
     thankyouPopup?.classList.remove("active");
+}
+
+function showStatus(message, type = "error") {
+    if (!contactStatus) return;
+    contactStatus.textContent = message;
+    contactStatus.classList.remove("success", "error");
+    contactStatus.classList.add(type);
+    contactStatus.style.display = "block";
+}
+
+function clearStatus() {
+    if (!contactStatus) return;
+    contactStatus.textContent = "";
+    contactStatus.classList.remove("success", "error");
+    contactStatus.style.display = "none";
 }
 
 if (thankyouClose) {
@@ -243,38 +259,39 @@ if (thankyouPopup) {
 
 if (contactForm) {
     if (window.emailjs) {
-        emailjs.init("YOUR_PUBLIC_KEY");
+        emailjs.init("sWqsm6_Y7qYXpXXRm");
     }
 
     contactForm.addEventListener("submit", function(e){
         e.preventDefault();
+
+        clearStatus();
 
         if (!contactForm.checkValidity()) {
             contactForm.reportValidity();
             return;
         }
 
-        const showPopup = () => {
-            thankyouPopup?.classList.add("active");
-            contactForm.reset();
-        };
-
-        if (!window.emailjs) {
-            showPopup();
+        if (!window.emailjs || typeof emailjs.sendForm !== 'function') {
+            showStatus("Email service is unavailable right now. Please try again later or contact us by phone.", "error");
             return;
         }
 
+        showStatus("Sending your request...", "info");
+
         emailjs.sendForm(
-            "YOUR_SERVICE_ID",
-            "YOUR_TEMPLATE_ID",
-            this
+            "service_4pkjbeq",
+            "template_8mawlzs",
+            "#contactForm"
         )
         .then(() => {
-            showPopup();
+            thankyouPopup?.classList.add("active");
+            contactForm.reset();
+            clearStatus();
         })
         .catch(err => {
-            console.log(err);
-            showPopup();
+            console.error("EmailJS send error:", err);
+            showStatus("Unable to send your request right now. Please try again later.", "error");
         });
     });
 }
