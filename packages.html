@@ -1,307 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3D Flip Contact Cards</title>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KD Tent House Kangra | Best Wedding Decorator, Tent House & Event Planner in Himachal Pradesh</title>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    <!-- stylesheet linked here -->
+    <link rel="stylesheet" href="style.css">
 
-body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:50px 20px;
-    background:linear-gradient(135deg,#f8f9fa,#eef3f7);
-}
+    <!-- font awesome linked here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-/* SECTION */
-.contact-section{
-    width:100%;
-    max-width:1200px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-size:3rem;
-    color:#222;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:#666;
-    font-size:1.1rem;
-}
-
-/* GRID */
-.dh-box-wrapper{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-/* FLIP CARD */
-.dh-flip-card{
-    height:320px;
-    perspective:1200px;
-}
-
-.dh-flip-inner{
-    position:relative;
-    width:100%;
-    height:100%;
-    transition:transform .9s cubic-bezier(.4,.2,.2,1);
-    transform-style:preserve-3d;
-}
-
-.dh-flip-card:hover .dh-flip-inner{
-    transform:rotateY(180deg);
-}
-
-/* BOTH SIDES */
-.dh-front,
-.dh-back{
-    position:absolute;
-    width:100%;
-    height:100%;
-    border-radius:25px;
-    backface-visibility:hidden;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:30px;
-}
-
-/* FRONT */
-.dh-front{
-    background:#fff;
-    border:1px solid rgba(255,166,0,.25);
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.08);
-}
-
-.dh-front::before{
-    content:"";
-    position:absolute;
-    top:-50px;
-    right:-50px;
-    width:120px;
-    height:120px;
-    background:orange;
-    border-radius:50%;
-    opacity:.12;
-}
-
-.dh-front::after{
-    content:"";
-    position:absolute;
-    bottom:-40px;
-    left:-40px;
-    width:100px;
-    height:100px;
-    background:orange;
-    border-radius:50%;
-    opacity:.08;
-}
-
-.dh-icon{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#ffcc00,#ff9800);
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:34px;
-    margin-bottom:20px;
-    box-shadow:0 10px 25px rgba(255,165,0,.35);
-}
-
-.dh-front h3{
-    font-size:28px;
-    color:#222;
-    font-weight:700;
-}
-
-/* BACK */
-.dh-back{
-    background:linear-gradient(135deg,#ff9800,#ffb300);
-    color:white;
-    transform:rotateY(180deg);
-    box-shadow:
-    0 15px 35px rgba(255,152,0,.35);
-}
-
-.dh-back h3{
-    font-size:28px;
-    margin-bottom:18px;
-}
-
-.dh-back p{
-    line-height:1.9;
-    font-size:17px;
-}
-
-/* FLOATING ANIMATION */
-.dh-flip-card{
-    animation:float 4s ease-in-out infinite;
-}
-
-.dh-flip-card:nth-child(2){
-    animation-delay:.5s;
-}
-
-.dh-flip-card:nth-child(3){
-    animation-delay:1s;
-}
-
-@keyframes float{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-10px);
-    }
-}
-
-/* TABLET */
-@media(max-width:992px){
-
-    .dh-box-wrapper{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .section-title h2{
-        font-size:2.5rem;
-    }
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    .dh-box-wrapper{
-        grid-template-columns:1fr;
-    }
-
-    .dh-flip-card{
-        height:280px;
-    }
-
-    .section-title h2{
-        font-size:2rem;
-    }
-
-    .dh-front h3,
-    .dh-back h3{
-        font-size:24px;
-    }
-
-    .dh-back p{
-        font-size:15px;
-    }
-}
-</style>
+    <!-- meta tags -->
+    <meta name="keywords"
+        content="KD Tent House, Tent House Kangra, Wedding Decorator Kangra, Best Tent House Himachal Pradesh, Wedding Planner Kangra, Event Planner Kangra, Tent Rental Kangra, Birthday Decoration Kangra, Catering Service Kangra, Luxury Wedding Decoration Himachal Pradesh">
+    <meta property="og:title" content="KD Tent House Kangra">
+    <meta property="og:description"
+        content="Premium Wedding Decoration, Tent House, Catering, DJ and Event Planning Services in Kangra and Himachal Pradesh.">
+    <meta property="og:image" content="https://www.kdtenthouse.com/images/logo.png">
+    <meta property="og:url" content="https://www.kdtenthouse.com">
+    <meta property="og:type" content="website">
 </head>
 <body>
 
-<section class="contact-section">
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
 
-    <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>Hover over the cards to view details</p>
+        <div class="nav-wrapper">
+
+            <!-- LEFT NAV -->
+            <ul class="nav-left">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+            </ul>
+
+            <!-- CENTER LOGO -->
+            <div class="logo">
+                <a href="index.html" aria-label="Go to home">
+                    <img src="./Images/Kd new Logo white (1).png" alt="KD Tent House">
+                </a>
+            </div>
+
+            <!-- RIGHT NAV -->
+            <ul class="nav-right">
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="packages.html">PACKAGES</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+            <!-- MOBILE MENU BUTTON -->
+            <div class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+        <ul class="mobile-menu" id="mobileMenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="packages.html">PACKAGES</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Minimal Fine Art Header -->
+    <div class="magazine-header">
+        <span class="brand-tag">KD Tent House Design Studio</span>
+        <h1>Curated spaces for <em>extraordinary</em> events.</h1>
     </div>
 
-    <div class="dh-box-wrapper">
+    <!-- Magazine Stack Grid -->
+    <div class="editorial-stack">
 
-        <!-- CALL -->
-        <div class="dh-flip-card">
-            <div class="dh-flip-inner">
+        <!-- Column Section 1: Mehndi -->
+        <div class="editorial-row">
+            <div class="media-frame">
+                <img src="./Images/DSC06385.JPG" alt="Mehndi setup design art">
+            </div>
+            <div class="details-frame">
+                <h2>The Mehndi Gathering</h2>
+                <p class="excerpt">A refined visual balance highlighting handcrafted traditional hangings, rich drapes, and beautifully coordinated low-lying seating arrangements.</p>
+                
+                <ul class="token-list">
+                    <li>Draped Canopy</li>
+                    <li>Traditional Props</li>
+                    <li>Low Diwans</li>
+                    <li>Fairy Lights</li>
+                </ul>
 
-                <div class="dh-front">
-                    <div class="dh-icon">
-                        <i class="fas fa-phone-alt"></i>
+                <div class="editorial-pricing">
+                    <div class="price-meta">
+                        <span>Arrangements From</span>
+                        <div class="cost">₹8,000</div>
                     </div>
-                    <h3>Call Us Now</h3>
+                    <a href="contact.html" class="editorial-btn about-btn">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column Section 2: Haldi -->
+        <div class="editorial-row">
+            <div class="media-frame">
+                <img src="./Images/Haldi.jpg" alt="Haldi event decoration art">
+            </div>
+            <div class="details-frame">
+                <h2>The Haldi Celebration</h2>
+                <p class="excerpt">Lively, warm installations structured cleanly using marigold flower geometries and custom backdrops optimized perfectly for morning portraits.</p>
+                
+                <ul class="token-list">
+                    <li>Brass Urli Setup</li>
+                    <li>Marigold Strands</li>
+                    <li>Symmetrical Backdrops</li>
+                    <li>Warm Wash</li>
+                </ul>
+
+                <div class="editorial-pricing">
+                    <div class="price-meta">
+                        <span>Arrangements From</span>
+                        <div class="cost">₹8,000</div>
+                    </div>
+                    <a href="contact.html" class="editorial-btn about-btn">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column Section 3: Wedding Decor -->
+        <div class="editorial-row">
+            <div class="media-frame">
+                <img src="./Images/_7 Vows Production_Cam 1 Wedding__MG_3047.jpg" alt="Grand wedding layout production">
+            </div>
+            <div class="details-frame">
+                <h2>The Grand Wedding</h2>
+                <p class="excerpt">Full-scale elite production architecture featuring monumental main stages, royal walkways, and ultra-high-density bespoke floral installations.</p>
+                
+                <ul class="token-list">
+                    <li>Royal Mandap</li>
+                    <li>Runway Entry</li>
+                    <li>Intelligent Spotlighting</li>
+                    <li>Exotic Foliage</li>
+                </ul>
+
+                <div class="editorial-pricing">
+                    <div class="price-meta">
+                        <span>Arrangements From</span>
+                        <div class="cost">₹1.50 Lakh</div>
+                    </div>
+                    <a href="contact.html" class="editorial-btn about-btn">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+     
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- FOOTER BRAND -->
+            <div class="footer-box footer-brand">
+                <h2>KD <span>Tent House</span></h2>
+                <p>
+                    Premium wedding decoration, tent setup,
+                    catering services, lighting, DJ, birthday
+                    parties, engagement events and luxury
+                    event management services with modern styling.
+                </p>
+
+                <div class="footer-social">
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/kdtenthouse/" target="_blank" rel="noopener"
+                        aria-label="Visit KD Tent House on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/kdtenthouse/?hl=en" target="_blank" rel="noopener"
+                        aria-label="Visit KD Tent House on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <!-- WhatsApp Chat -->
+                    <a href="https://wa.me/919805829777?text=Hello%20KD%20Tent%20House,%20I%20would%20like%20to%20know%20more%20about%20your%20wedding%20and%20event%20decoration%20services."
+                        target="_blank" rel="noopener" aria-label="Chat with KD Tent House on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
                 </div>
 
-                <div class="dh-back">
-                    <h3>Call Us Now</h3>
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="services.html">Services</a></li>
+
+                    <li><a href="gallery.html">Gallery</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- SERVICES -->
+
+            <div class="footer-box">
+
+                <h3>Services</h3>
+
+                <ul>
+
+                    <li><a href="services.html#wedding-decoration">Wedding Decoration</a></li>
+
+                    <li><a href="services.html#tent-booking">Tent Booking</a></li>
+
+                    <li><a href="services.html#lighting-dj">Lighting & DJ</a></li>
+
+                    <li><a href="services.html#catering">Catering Service</a></li>
+
+                    <li><a href="services.html#events">Birthday Events</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="footer-box">
+
+                <h3>Contact Info</h3>
+
+                <div class="footer-contact">
+
                     <p>
-                        +91 9805829777<br>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Kangra, near bus stand
+                        (Himachal Pradesh) 176001
+                    </p>
+
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
                         +91 9805829777
                     </p>
-                </div>
 
-            </div>
-        </div>
-
-        <!-- EMAIL -->
-        <div class="dh-flip-card">
-            <div class="dh-flip-inner">
-
-                <div class="dh-front">
-                    <div class="dh-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Us</h3>
-                </div>
-
-                <div class="dh-back">
-                    <h3>Email Us</h3>
                     <p>
+                        <i class="fa-solid fa-envelope"></i>
                         kdtenthouse@gmail.com
                     </p>
+
                 </div>
 
             </div>
+
         </div>
 
-        <!-- LOCATION -->
-        <div class="dh-flip-card">
-            <div class="dh-flip-inner">
+        <!-- FOOTER BOTTOM -->
 
-                <div class="dh-front">
-                    <div class="dh-icon">
-                        <i class="fas fa-location-dot"></i>
-                    </div>
-                    <h3>Our Location</h3>
-                </div>
+        <div class="footer-bottom">
 
-                <div class="dh-back">
-                    <h3>Our Location</h3>
-                    <p>
-                        KD Tent House<br>
-                        Near Bus Stand Kangra<br>
-                        Himachal Pradesh 176001
-                    </p>
-                </div>
+            <p>
+                &copy; 2026 KD Tent House. All Rights Reserved.
+            </p>
 
-            </div>
         </div>
+
+    </footer>
+<!-- FLOATING BUTTONS -->
+    <div class="floating-btns">
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/919805829777?text=Hello%20KD%20Tent%20House,%20I%20would%20like%20to%20know%20more%20about%20your%20wedding%20and%20event%20decoration%20services."
+            target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="float-btn whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <!-- CALL -->
+        <a href="tel:+919805829777" aria-label="Call KD Tent House" class="float-btn call-btn">
+            <i class="fa-solid fa-phone"></i>
+        </a>
 
     </div>
 
-</section>
 
-
-
+    <script src="main.js"></script>
 </body>
 </html>
