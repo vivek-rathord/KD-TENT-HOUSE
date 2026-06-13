@@ -259,7 +259,7 @@ if (thankyouPopup) {
 
 if (contactForm) {
     if (window.emailjs) {
-        emailjs.init("sWqsm6_Y7qYXpXXRm");
+        emailjs.init("YOUR_PUBLIC_KEY");
     }
 
     contactForm.addEventListener("submit", function(e){
@@ -272,22 +272,19 @@ if (contactForm) {
             return;
         }
 
-        if (!window.emailjs || typeof emailjs.sendForm !== 'function') {
+        if (!window.emailjs) {
             showStatus("Email service is unavailable right now. Please try again later or contact us by phone.", "error");
             return;
         }
 
-        showStatus("Sending your request...", "info");
-
         emailjs.sendForm(
-            "service_4pkjbeq",
-            "template_8mawlzs",
-            "#contactForm"
+            "YOUR_SERVICE_ID",
+            "YOUR_TEMPLATE_ID",
+            this
         )
         .then(() => {
             thankyouPopup?.classList.add("active");
             contactForm.reset();
-            clearStatus();
         })
         .catch(err => {
             console.error("EmailJS send error:", err);
